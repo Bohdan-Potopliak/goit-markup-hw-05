@@ -631,10 +631,15 @@ a {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-x-btn:hover,
-.modal-x-btn:focus {
-    background-color: #404bbf;
+.modal-x-btn:hover+.x-btn {
     fill: #ffffff;
+    background-color: #404bbf;
+    border: none;
+}
+
+.modal-x-btn:focus + .x-btn {
+    fill: #ffffff;
+    background-color: #404bbf;
     border: none;
 }
 
@@ -711,18 +716,6 @@ a {
     margin-bottom: 16px;
 }
 
-.comment {
-    font-weight: 400;
-    font-size: 12px;
-    /* line-height: 14px; */
-    line-height: 1.16667;
-    letter-spacing: 0.04em;
-    color: #8e8f99;
-
-    display: block;
-    margin-bottom: 4px;
-}
-
 .modal-textarea {
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
@@ -737,6 +730,7 @@ a {
     font-size: 12px;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     display: block;
+    background-color: transparent;
 }
 
 .modal-textarea:focus {
